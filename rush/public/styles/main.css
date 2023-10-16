@@ -1,0 +1,98 @@
+:root {
+    --ff-body: 'Josefin Sans', 'Noto Sans Thai Looped', sans-serif;
+    --ff-display: 'Bungee', sans-serif;
+    --clr-dark: hsl(40, 7%, 8%);
+    --clr-very-dark: hsl(40, 7%, 5%);
+    --clr-light: hsl(22, 73%, 97%);
+    --clr-main: hsl(22, 100%, 68%);
+}
+
+/* Utility Classes */
+
+.text-right {
+    text-align: right;
+}
+
+.even-columns {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+/* General Styling */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: 0.10rem;
+    word-spacing: 0.15rem;
+    font-family: var(--ff-body);
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    color: var(--clr-light);
+
+    background-image: radial-gradient(#3df09a 2px, transparent 2px), radial-gradient(#3b3b46 2px, transparent 2px);
+    background-size: 47px 47px;
+    background-position: 0 0, 23.5px 23.5px;
+    background-color: #121615;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Specific Styling */
+
+.title-heading {
+    font-family: var(--ff-display);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    color: var(--clr-main);
+    background-color: var(--clr-dark);
+    text-align: center;
+}
+
+.primary-header {
+    opacity: 0.75;
+}
+
+.institution-text {
+    font-size: clamp(1.5rem, 4vw, 5rem);
+    text-align: center;
+    transition: 1s;
+}
+
+#tpn > .institution-text:hover {
+    background-image: linear-gradient(45deg, #f815ed, #7b97e9);
+    border-radius: 15px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#piscine > .institution-text:hover {
+    background-image: linear-gradient(45deg, #073615, #7b97e9);
+    border-radius: 15px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.primary-header {
+    background-color: var(--clr-main);
+}
+
+
+.primary-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: var(--clr-very-dark);
+
+    opacity: 0.75;
+}
+
+.primary-footer > p {
+    padding-inline: 1em;
+}
